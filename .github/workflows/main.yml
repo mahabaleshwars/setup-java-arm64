@@ -5,7 +5,7 @@ on:
 
 jobs:
   windows-test:
-     runs-on: windows@latest
+     runs-on: windows-latest
      name: Testing on Github Runner
      steps:
        - uses: mahabaleshwars/setup-java-arm64@main
