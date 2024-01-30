@@ -37,7 +37,7 @@ jobs:
      steps:
        - uses: mahabaleshwars/setup-java-arm64@main
          with:
-           distribution: temurin
+           distribution: adopt-openj9
            java-version: 17
 
   Microsoft-test:
