@@ -1,0 +1,14 @@
+name: Java Multiple JDK Demo
+
+on:
+ workflow_dispatch:
+
+jobs:
+  windows-test:
+     runs-on: windows
+     name: Testing on Github Runner
+     steps:
+       - uses: mahabaleshwars/setup-java-arm64@main
+         with:
+           distribution: temurin
+           java-version: 17
