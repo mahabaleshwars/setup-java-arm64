@@ -1,86 +1,86 @@
 name: Java Multiple JDK Demo
 
 on:
- workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   Temurin-test:
-     runs-on: windows-latest
-     name: Testing on Github Runner for temurin sdk
-     steps:
-       - uses: mahabaleshwars/setup-java-arm64@main
-         with:
-           distribution: temurin
-           java-version: 17
-           
+    runs-on: windows-latest
+    name: Testing on Github Runner for temurin sdk
+    steps:
+      - uses: mahabaleshwars/setup-java-arm64@main
+        with:
+          distribution: temurin
+          java-version: 17
+
   Zulu-test:
-     runs-on: windows-latest
-     name: Testing on Github Runner for zulu sdk
-     steps:
-       - uses: mahabaleshwars/setup-java-arm64@main
-         with:
-           distribution: zulu
-           java-version: 17
-           
+    runs-on: windows-latest
+    name: Testing on Github Runner for zulu sdk
+    steps:
+      - uses: mahabaleshwars/setup-java-arm64@main
+        with:
+          distribution: zulu
+          java-version: 17
+
   Adopt-test:
-     runs-on: windows-latest
-     name: Testing on Github Runner for adopt-test
-     steps:
-       - uses: mahabaleshwars/setup-java-arm64@main
-         with:
-           distribution: adopt-test
-           java-version: 17
+    runs-on: windows-latest
+    name: Testing on Github Runner for adopt-test
+    steps:
+      - uses: mahabaleshwars/setup-java-arm64@main
+        with:
+          distribution: adopt-test
+          java-version: 17
 
   Adopt-openj9-test:
-     runs-on: windows-latest
-     name: Testing on Github Runner for adopt openj9
-     steps:
-       - uses: mahabaleshwars/setup-java-arm64@main
-         with:
-           distribution: adopt-openj9
-           java-version: 17
+    runs-on: windows-latest
+    name: Testing on Github Runner for adopt openj9
+    steps:
+      - uses: mahabaleshwars/setup-java-arm64@main
+        with:
+          distribution: adopt-openj9
+          java-version: 17
 
   Microsoft-test:
-      runs-on: windows-latest
-      name: Testing on Github Runner for microsoft jdk
-      steps:
-        - uses: mahabaleshwars/setup-java-arm64@main
-          with:
-           distribution: microsoft
-           java-version: 17
+    runs-on: windows-latest
+    name: Testing on Github Runner for microsoft jdk
+    steps:
+      - uses: mahabaleshwars/setup-java-arm64@main
+        with:
+          distribution: microsoft
+          java-version: 17
 
   Corretto-test:
-      runs-on: windows-latest
-      name: Testing on Github Runner for corretto jdk
-      steps:
-        - uses: mahabaleshwars/setup-java-arm64@main
-          with:
-           distribution: corretto
-           java-version: 17
+    runs-on: windows-latest
+    name: Testing on Github Runner for corretto jdk
+    steps:
+      - uses: mahabaleshwars/setup-java-arm64@main
+        with:
+          distribution: corretto
+          java-version: 17
 
   Semeru-test:
-      runs-on: windows-latest
-      name: Testing on Github Runner for semuru jdk
-      steps:
-        - uses: mahabaleshwars/setup-java-arm64@main
-          with:
-           distribution: semuru
-           java-version: 17
+    runs-on: windows-latest
+    name: Testing on Github Runner for semuru jdk
+    steps:
+      - uses: mahabaleshwars/setup-java-arm64@main
+        with:
+          distribution: semuru
+          java-version: 17
 
   Oracle-test:
-      runs-on: windows-latest
-      name: Testing on Github Runner for oracle
-      steps:
-        - uses: mahabaleshwars/setup-java-arm64@main
-          with:
-           distribution: oracle
-           java-version: 17
+    runs-on: windows-latest
+    name: Testing on Github Runner for oracle
+    steps:
+      - uses: mahabaleshwars/setup-java-arm64@main
+        with:
+          distribution: oracle
+          java-version: 17
 
   Dragonwell-test:
-      runs-on: windows-latest
-      name: Testing on Github Runner for dragonwell
-      steps:
-        - uses: mahabaleshwars/setup-java-arm64@main
-          with:
-           distribution: dragonwell
-           java-version: 17
+    runs-on: windows-latest
+    name: Testing on Github Runner for dragonwell
+    steps:
+      - uses: mahabaleshwars/setup-java-arm64@main
+        with:
+          distribution: dragonwell
+          java-version: 17
