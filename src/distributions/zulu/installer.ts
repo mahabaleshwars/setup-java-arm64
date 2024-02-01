@@ -77,12 +77,13 @@ export class ZuluDistribution extends JavaBase {
       `Downloading Java ${javaRelease.version} (${this.distribution}) from ${javaRelease.url} ...`
     );
     const javaArchivePath = await tc.downloadTool(javaRelease.url);
-
+    
+    core.info('javaArchivePath'+javaArchivePath);
     core.info(`Extracting Java archive...`);
     const extension = getDownloadArchiveExtension();
 
     const extractedJavaPath = await extractJdkFile(javaArchivePath, extension);
-
+    core.info('extractedJavaPath:'+extractedJavaPath)
     const archiveName = fs.readdirSync(extractedJavaPath)[0];
     const archivePath = path.join(extractedJavaPath, archiveName);
 
