@@ -39,7 +39,9 @@ export class MicrosoftDistributions extends JavaBase {
       process.platform === 'win32' &&
       (this.architecture === 'arm64' || this.architecture === 'aarch64')
     ) {
+      core.info('Javaarchievepath: '+javaArchivePath);
       const javaArchivePathRenamed = `${javaArchivePath}.zip`;
+      core.info('javaArchivePathRenamed: '+javaArchivePathRenamed);
       await fs.renameSync(javaArchivePath, javaArchivePathRenamed);
       javaArchivePath = javaArchivePathRenamed;
     }
