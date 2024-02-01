@@ -28,7 +28,6 @@ export class MicrosoftDistributions extends JavaBase {
     );
     let javaArchivePath = await tc.downloadTool(javaRelease.url);
     
-    core.info('Javaarchievepath: '+javaArchivePath);
     core.info(`Extracting Java archive...`);
     const extension = getDownloadArchiveExtension();
     // Rename archive to add extension because after downloading
@@ -40,9 +39,7 @@ export class MicrosoftDistributions extends JavaBase {
       process.platform === 'win32' &&
       (this.architecture === 'arm64' || this.architecture === 'aarch64')
     ) {
-      core.info('Javaarchievepath: '+javaArchivePath);
       const javaArchivePathRenamed = `${javaArchivePath}.zip`;
-      core.info('javaArchivePathRenamed: '+javaArchivePathRenamed);
       await fs.renameSync(javaArchivePath, javaArchivePathRenamed);
       javaArchivePath = javaArchivePathRenamed;
     }
