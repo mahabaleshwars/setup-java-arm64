@@ -27,9 +27,9 @@ export class MicrosoftDistributions extends JavaBase {
       `Downloading Java ${javaRelease.version} (${this.distribution}) from ${javaRelease.url} ...`
     );
     let javaArchivePath = await tc.downloadTool(javaRelease.url);
-
-    core.info(`Extracting Java archive...`);
+    
     core.info('Javaarchievepath: '+javaArchivePath);
+    core.info(`Extracting Java archive...`);
     const extension = getDownloadArchiveExtension();
     // Rename archive to add extension because after downloading
     // archive does not contain extension type and it leads to some issues
