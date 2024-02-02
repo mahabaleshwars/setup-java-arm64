@@ -85,7 +85,7 @@ export class MicrosoftDistributions extends JavaBase {
 
     core.info('range:'+range);
     core.info('manifest: '+ JSON.stringify(manifest));
-    core.info('arch');
+    core.info('arch'+arch);
     const foundRelease = await tc.findFromManifest(range, true, manifest, arch);
     core.info('Found Release: '+foundRelease);
     if (!foundRelease) {
