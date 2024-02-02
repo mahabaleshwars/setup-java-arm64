@@ -78,13 +78,13 @@ export class MicrosoftDistributions extends JavaBase {
     }
 
     const manifest = await this.getAvailableVersions();
-
+    core.info('manifest: '+manifest);
     if (!manifest) {
       throw new Error('Could not load manifest for Microsoft Build of OpenJDK');
     }
 
     const foundRelease = await tc.findFromManifest(range, true, manifest, arch);
-
+    core.info('Found Release: '+foundRelease);
     if (!foundRelease) {
       throw new Error(
         `Could not find satisfied version for SemVer ${range}.\nAvailable versions: ${manifest
