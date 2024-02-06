@@ -83,9 +83,6 @@ export class MicrosoftDistributions extends JavaBase {
       throw new Error('Could not load manifest for Microsoft Build of OpenJDK');
     }
 
-    core.info('range:'+range);
-    core.info('manifest: '+ JSON.stringify(manifest));
-    core.info('arch'+arch);
     const foundRelease = await tc.findFromManifest(range, true, manifest, arch);
     core.info('Found Release: '+foundRelease);
     if (!foundRelease) {
